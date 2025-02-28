@@ -165,12 +165,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp BSPC>, <&kp PSCRN>;
         };        
-        tdx: tap_dance_x {                                 //test. tap spc, hold sft, double hold mo(1)
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt LSHFT SPACE>, <&mo 1>;
-        };
+
 
     };
 };
@@ -178,15 +173,15 @@
 //custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap
 
 / {
-        cp: copy_paste {
-            compatible = "zmk,behavior-hold-tap";
-            label = "COPY&PASTE";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <LC(V)>, <LC(C)>;
-        };
+behaviors {
+  hold_tap: hold_tap {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <0>;
+    bindings = <&kp>, <&kp>;
+  };
+};
 };
 
 //macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros 
@@ -247,7 +242,7 @@ macros {
 
         default_layer {
             bindings = <
-                           &td0        &cp   &td1       &td4
+                           &td0        &hold_tap LC(V) LC(C)   &td1       &td4
                            &kp LEFT    &kp DOWN          &kp UP     &kp RIGHT
               &mkp LCLK    &td2        &td3                                       
             >;
