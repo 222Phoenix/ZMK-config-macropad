@@ -131,6 +131,108 @@
       };
 
 
+//tap dance tap dance tap dance tap dance ctap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance 
+
+/ {
+    behaviors {
+        td0: tap_dance_0 {                                 //left tab
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(COMMA)>, <&kp LC(LS(TAB))>;
+        };
+        td1: tap_dance_1 {                                 //right tab
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(DOT)>, <&kp LC(TAB)>;
+        };
+        td2: tap_dance_2 {                                 //mclick
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp MCLK>, <&kp LC(LS(T))>;
+        };
+        td3: tap_dance_3 {                                 //rclick
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp RCLK>, <&kp LC(W)>;
+        };
+        td4: tap_dance_4 {                                 //bspc pscrn
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp BSPC>, <&kp PSCRN>;
+        };        
+
+    };
+};
+
+//custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap
+
+#define CP() &cp LC(V) LC(C)
+/ {
+        cp: copy_paste {
+            compatible = "zmk,behavior-hold-tap";
+            label = "COPY&PASTE";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+};
+
+//macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros 
+
+/ {
+macros {
+    macro_name: macro_name {
+        label = "my_macro";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_press &kp LSHFT>
+            , <&macro_tap &kp A &kp B &kp C>
+            , <&macro_release &kp LSHFT>
+            ;
+    };
+
+};
+};
+
+//combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_pgup {
+            timeout-ms = <175>;
+            key-positions = <7 8>;
+            bindings = <&kp PG_UP>;
+        };
+        combo_pgdn {
+            timeout-ms = <175>;
+            key-positions = <5 6>;
+            bindings = <&kp PG_DN>;
+        };
+        combo_esc {
+            timeout-ms = <175>;
+            key-positions = <6 7>;
+            bindings = <&kp ESC>;
+        };
+        combo_reset {
+            timeout-ms = <175>;
+            key-positions = <5 8>;
+            bindings = <&kp &bootloader>;
+        };
+
+    };
+};
+
+//keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap 
 
 
 / {
@@ -140,11 +242,21 @@
 
         default_layer {
             bindings = <
-                           &kp Q       &kp W       &kp E     &kp PSCRN
-                           &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT
-              &mkp LCLK    &kp Y       &kp Z                                       
+                           &td0        &cp LC(C) LC(V)   &td1       &td4
+                           &kp LEFT    &kp DOWN          &kp UP     &kp RIGHT
+              &mkp LCLK    &td2        &td3                                       
             >;
 
         };
+
+        next_layer {
+            bindings = <
+                           &trans       &trans           &trans      &trans
+                           &trans       &C_VOL_DN        &C_VOL_UP   &trans
+              &trans       &trans       &trans                                       
+            >;
+
+        };
+
     };
 };
