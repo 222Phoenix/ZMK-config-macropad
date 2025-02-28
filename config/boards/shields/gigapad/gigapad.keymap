@@ -139,13 +139,15 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LS(COMMA)>, <&kp LC(LS(TAB))>;
+//            bindings = <&kp LS(COMMA)>, <&kp LC(LS(TAB))>;
+            bindings = <&hold_tap LS(COMMA) LA(LEFT)>, <&kp LC(LS(TAB))>;
         };
         td1: tap_dance_1 {                                 //right tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LS(DOT)>, <&kp LC(TAB)>;
+//            bindings = <&kp LS(DOT)>, <&kp LC(TAB)>;
+            bindings = <&hold_tap LS(DOT) LA(RIGHT)>, <&kp LC(LS(TAB))>;
         };
         td2: tap_dance_2 {                                 //mclick
             compatible = "zmk,behavior-tap-dance";
@@ -165,7 +167,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp BSPC>, <&kp PSCRN>;
         };        
-
+        
 
     };
 };
