@@ -130,11 +130,6 @@
         status="okay";
       };
 
-    #else
-
-      &gpio_ps2  {
-        status = "okay";
-      };
 
 
 
