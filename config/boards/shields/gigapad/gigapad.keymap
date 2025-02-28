@@ -177,7 +177,6 @@
 
 //custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap
 
-//#define CP() &cp LC(V) LC(C)
 / {
         cp: copy_paste {
             compatible = "zmk,behavior-hold-tap";
