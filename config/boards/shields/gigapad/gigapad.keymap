@@ -177,6 +177,7 @@
 
 //custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap custom hold tap
 
+#define CP() &cp LC(V) LC(C)
 / {
         cp: copy_paste {
             compatible = "zmk,behavior-hold-tap";
@@ -247,7 +248,7 @@ macros {
 
         default_layer {
             bindings = <
-                           &td0        &cp LC(C) LC(V)   &td1       &td4
+                           &td0        CP()   &td1       &td4
                            &kp LEFT    &kp DOWN          &kp UP     &kp RIGHT
               &mkp LCLK    &td2        &td3                                       
             >;
