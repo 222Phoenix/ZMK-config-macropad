@@ -148,7 +148,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hold_tap_mo 1 MCLK>, <&kp LC(LS(T))>;
+            bindings = <&hold_tap_clk 1 MCLK>, <&kp LC(LS(T))>;
         };
         tdrck: tap_dance_tdrck {                               //rclick
             compatible = "zmk,behavior-tap-dance";
@@ -171,12 +171,12 @@ behaviors {
     quick-tap-ms = <0>;
     bindings = <&kp>, <&kp>;
   };
-  hold_tap_mo: hold_tap_mo {
+  hold_tap_clk: hold_tap_clk {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     tapping-term-ms = <200>;
     quick-tap-ms = <0>;
-    bindings = <&mo>, <&kp>;
+    bindings = <&mo>, <&mkp>;
   };
 
  };
