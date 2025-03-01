@@ -145,13 +145,13 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hold_tap LS(DOT) LA(RIGHT)>, <&kp LC(LS(TAB))>;
+            bindings = <&hold_tap LS(DOT) LA(RIGHT)>, <&kp LC(TAB)>;
         };
         tdmck: tap_dance_2 {                                 //mclick
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hold_tap MCLK mo(1)>, <&kp LC(LS(T))>;
+            bindings = <&hold_tap MCLK &mo(1)>, <&kp LC(LS(T))>;
         };
         tdrck: tap_dance_3 {                                 //rclick
             compatible = "zmk,behavior-tap-dance";
@@ -175,7 +175,7 @@ behaviors {
     quick-tap-ms = <0>;
     bindings = <&kp>, <&kp>;
   };
-};
+ };
 };
 
 //macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros 
@@ -193,7 +193,7 @@ macros {
             ;
     };
 
-};
+  };
 };
 
 //combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
@@ -229,7 +229,6 @@ macros {
 //keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap 
 
 / {
-
     keymap {
         compatible = "zmk,keymap";
 
