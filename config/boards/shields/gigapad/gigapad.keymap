@@ -224,7 +224,7 @@ macros {
         combo_reset {
             timeout-ms = <175>;
             key-positions = <5 8>;
-            bindings = <&kp &bootloader>;
+            bindings = <&bootloader>;
         };
 
     };
@@ -240,7 +240,7 @@ macros {
         default_layer {
             bindings = <
                                         &tdltb       &hold_tap LC(V) LC(C)   &tdrtb       &kp BSPC
-                                        &kp &bootloader     &kp DOWN                &kp UP       &kp RIGHT
+                                        &&bootloader     &kp DOWN                &kp UP       &kp RIGHT
               &mkp LCLK    &tdmck       &tdrck                                       
             >;
         };
