@@ -240,7 +240,7 @@ macros {
         default_layer {
             bindings = <
                                         &tdltb       &hold_tap LC(V) LC(C)   &tdrtb       &kp BSPC
-                                        &&bootloader     &kp DOWN                &kp UP       &kp RIGHT
+                                        &bootloader     &kp DOWN                &kp UP       &kp RIGHT
               &mkp LCLK    &tdmck       &tdrck                                       
             >;
         };
