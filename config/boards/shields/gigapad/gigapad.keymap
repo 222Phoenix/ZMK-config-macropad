@@ -135,30 +135,36 @@
 
 / {
     behaviors {
-        tdltb: tap_dance_0 {                                 //left tab
+        td0: tap_dance_0 {                                 //left tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&hold_tap LS(COMMA) LA(LEFT)>, <&kp LC(LS(TAB))>;
         };
-        tdrtb: tap_dance_1 {                                 //right tab
+        td1: tap_dance_1 {                                 //right tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hold_tap LS(DOT) LA(RIGHT)>, <&kp LC(TAB)>;
+            bindings = <&hold_tap LS(DOT) LA(RIGHT)>, <&kp LC(LS(TAB))>;
         };
-        tdmck: tap_dance_2 {                                 //mclick
+        td2: tap_dance_2 {                                 //mclick
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hold_tap MCLK &mo(1)>, <&kp LC(LS(T))>;
+            bindings = <&mkp MCLK>, <&kp LC(LS(T))>;
         };
-        tdrck: tap_dance_3 {                                 //rclick
+        td3: tap_dance_3 {                                 //rclick
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mkp RCLK>, <&kp LC(W)>;
         };
+        td4: tap_dance_4 {                                 //bspc pscrn
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp BSPC>, <&kp PSCRN>;
+        };        
         
 
     };
@@ -175,7 +181,7 @@ behaviors {
     quick-tap-ms = <0>;
     bindings = <&kp>, <&kp>;
   };
- };
+};
 };
 
 //macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros 
@@ -193,7 +199,7 @@ macros {
             ;
     };
 
-  };
+};
 };
 
 //combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
@@ -228,24 +234,28 @@ macros {
 
 //keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap 
 
+
 / {
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                                        &tdltb        &hold_tap LC(C) LC(V)   &tdrtb           &kp BSPC
-                                        &kp LEFT      &kp DOWN                &kp UP           &kp RIGHT
-              &mkp LCLK    &tdmck       &tdrck                                       
+                           &td0        &hold_tap LC(V) LC(C)   &td1       &td4
+                           &kp LEFT    &kp DOWN          &kp UP     &kp RIGHT
+              &mkp LCLK    &td2        &td3                                       
             >;
+
         };
 
         next_layer {
             bindings = <
-                                        &trans         &trans                 &trans           &kp PSCRN
-                                        &trans         &kp C_VOL_DN           &kp C_VOL_UP     &trans
+                           &trans       &trans           &trans      &trans
+                           &trans       &kp C_VOL_DN     &kp C_VOL_UP   &trans
               &trans       &trans       &trans                                       
             >;
+
         };
 
     };
