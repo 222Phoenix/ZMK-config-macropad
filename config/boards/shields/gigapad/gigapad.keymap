@@ -151,7 +151,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mkp MCLK>, <&kp LC(LS(T))>;
+            bindings = <&hold_tap MCLK &mo 1 >, <&kp LC(LS(T))>;
         };
         tdrck: tap_dance_tdrck {                               //rclick
             compatible = "zmk,behavior-tap-dance";
