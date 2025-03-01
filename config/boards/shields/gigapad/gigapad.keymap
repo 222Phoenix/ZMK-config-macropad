@@ -2,16 +2,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-
-  #include <dt-bindings/zmk/mouse.h>
-  #include <dt-bindings/zmk/mouse_settings.h>
-  #include <behaviors/mouse_keys.dtsi>
-  #include <behaviors/mouse_setting.dtsi>
-
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/mouse_settings.h>
+#include <behaviors/mouse_keys.dtsi>
+#include <behaviors/mouse_setting.dtsi>
 
   // Only apply these settings on the side that has the TP connected
   // (usually the right side)
-
 
    /*
     * Input Listener Config
@@ -139,13 +136,13 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hold_tap LS(COMMA) LA(LEFT)>, <&kp LC(LS(TAB))>;
+            bindings = <&hold_tap LA(LEFT) LS(COMMA)>, <&kp LC(LS(TAB))>;
         };
         tdrtb: tap_dance_rtb {                                 //right tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hold_tap LS(DOT) LA(RIGHT)>, <&kp LC(TAB)>;
+            bindings = <&hold_tap LA(RIGHT) LS(DOT)>, <&kp LC(TAB)>;
         };
         tdmck: tap_dance_mck {                                 //mclick
             compatible = "zmk,behavior-tap-dance";
@@ -242,11 +239,10 @@ macros {
 
         default_layer {
             bindings = <
-                                        &tdltb       &hold_tap LC(C) LC(V)   &tdrtb       &kp BSPC
+                                        &tdltb       &hold_tap LC(V) LC(C)   &tdrtb       &kp BSPC
                                         &kp LEFT     &kp DOWN                &kp UP       &kp RIGHT
               &mkp LCLK    &tdmck       &tdrck                                       
             >;
-
         };
 
         next_layer {
@@ -255,7 +251,6 @@ macros {
                                         &trans       &kp C_VOL_DN            &kp C_VOL_UP   &trans
               &trans       &trans       &trans                                       
             >;
-
         };
 
     };
