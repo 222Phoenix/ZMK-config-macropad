@@ -236,7 +236,7 @@ macros {
             bindings = <
                                         &tdltb        &hold_tap LC(V) LC(C)   &tdrtb       &kp BSPC
                                         &kp LEFT    &kp DOWN          &kp UP     &kp RIGHT
-              &mkp LCLK    &td2         &td3                                       
+              &mkp LCLK    &tdmck         &tdrck                                       
             >;
 
         };
