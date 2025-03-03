@@ -8,18 +8,19 @@
         label = "default_kscan";
 
         input-gpios =
-            <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&blackpill 27 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&blackpill 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&blackpill  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&blackpill 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
 
-            <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-            <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;                                  
+            <&blackpill 39 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&blackpill 40 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&blackpill 41 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&blackpill 45 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+
+            <&blackpill 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&blackpill 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&blackpill 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;                                  
     };
 
 };
@@ -78,8 +79,8 @@
 // But on the corne keyboard, these pins are used for the backlight. So, this
 // example config uses the pins D16 and D10 for clock and data and
 // D9 for the reset circuit.
-#define MOUSE_PS2_PIN_SCL_PRO_MICRO <&pro_micro 1 GPIO_ACTIVE_HIGH>
-#define MOUSE_PS2_PIN_SDA_PRO_MICRO <&pro_micro 0 GPIO_ACTIVE_HIGH>
+#define MOUSE_PS2_PIN_SCL_PRO_MICRO <&blackpill 14 GPIO_ACTIVE_HIGH>
+#define MOUSE_PS2_PIN_SDA_PRO_MICRO <&blackpill 13 GPIO_ACTIVE_HIGH>
 
 
 // Configure the Power-On-Reset pin
@@ -92,7 +93,7 @@
 // trackpoint reset circuit.
 //
 // It's ok to use a low-frequency pin for this.
-#define MOUSE_PS2_PIN_RST_PRO_MICRO <&pro_micro 9 GPIO_ACTIVE_HIGH>
+#define MOUSE_PS2_PIN_RST_PRO_MICRO <&blackpill 15 GPIO_ACTIVE_HIGH>
 
 
 // Configure SDA pin using the pinctrl notation
