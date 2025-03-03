@@ -8,7 +8,7 @@
 #include <behaviors/mouse_setting.dtsi>
 
   // Only apply these settings on the side that has the TP connected
-  // (usually the right side)
+  // (usually the right side) 
 
    /*
     * Input Listener Config
