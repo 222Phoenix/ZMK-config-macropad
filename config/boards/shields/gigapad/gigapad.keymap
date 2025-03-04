@@ -7,19 +7,6 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors/mouse_setting.dtsi>
 
-
-
-&trackball_listener {
-    input-processors = <&zip_xy_scaler 3 2>;
-
-    scroller {
-        layers = <1>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
-        process-next;
-    };
-}
-
-
   // Only apply these settings on the side that has the TP connected
   // (usually the right side)
 

@@ -1,5 +1,3 @@
-#include <input/processors.dtsi>
-
 / {
     chosen {
         zmk,kscan = &default_kscan;
