@@ -127,6 +127,12 @@
         status="okay";
       };
 
+&trackpoint_listener {
+    scrolling {
+        layers = <next_layer>;
+        input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, <&zip_xy_to_scroll_mapper>;
+    };
+};
 
 //tap dance tap dance tap dance tap dance ctap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance 
 
