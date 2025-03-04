@@ -7,33 +7,17 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors/mouse_setting.dtsi>
 
-    &mouse_ps2_input_listener {
-      status = "disabled";
+#include <input/processors.dtsi>
+
+&trackball_listener {
+    input-processors = <&zip_xy_scaler 3 2>;
+
+    scroller {
+        layers = <1>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+        process-next;
     };
-
-    / {
-      // Input listener for scrolling
-      mouse_ps2_input_listener_scroll {
-        compatible = "zmk,input-behavior-listener";
-        device = <&mouse_ps2>;
-
-        // The TP will scroll only on the SYM layer
-        layers = <
-          next_layer
-        >;
-        // Use scroll event codes
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_MISC>;
-        y-input-code = <INPUT_REL_WHEEL>;
-
-        // Slow down the scrolling
-        scale-multiplier = <1>;
-        scale-divisor = <8>;
-
-        // Invert scroll direction
-        y-invert;
-      };
-    };
+}
 
 
   // Only apply these settings on the side that has the TP connected
