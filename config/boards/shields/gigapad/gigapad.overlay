@@ -525,11 +525,3 @@
 		// zmk-config/config/includes/mouse_tp.dtsi
     };
 };
-
-
-/ {
-  trackpoint_listener: trackpoint_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackpoint>;
-  };
-}; 
