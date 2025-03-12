@@ -6,7 +6,6 @@
 #include <dt-bindings/zmk/mouse_settings.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors/mouse_setting.dtsi>
-#include <input/processors.dtsi>
 
   // Only apply these settings on the side that has the TP connected
   // (usually the right side)
@@ -36,6 +35,11 @@
       // How long to wait, after the last mouse movement, before deactivating
       // the layer (Default: 250)
       //layer-toggle-timeout-ms = <250>;
+
+          scroller {
+        layers = <1>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
     };
 
 
