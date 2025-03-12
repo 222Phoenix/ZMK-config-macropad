@@ -205,10 +205,10 @@ macros {
     combos {
         compatible = "zmk,combos";
 
-        combo_pgupbroken {
+        combo_dnuptry {
             timeout-ms = <175>;
-            key-positions = <7 8>;
-            bindings = <&kp PG_UP>;
+            key-positions = <4 5>;
+            bindings = <&kp PG_DN>;
         };
         combo_esc { //fix
             timeout-ms = <175>;
@@ -222,7 +222,7 @@ macros {
         };
         combo_resetbroken {
             timeout-ms = <175>;
-            key-positions = <5 8>;
+            key-positions = <4 7>;
             bindings = <&bootloader>;
         };
 
