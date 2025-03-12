@@ -18,7 +18,8 @@
        move-accelerator = <&input_accelerator_move>; 
        scroll-accelerator = <&input_accelerator_scroll>; 
        scroll-layers = <1>; 
-       scroll-layers-reverse-direction-horizontal; 
+       //scroll-layers-reverse-direction-horizontal; 
+       scroll-layers-reverse-direction-vertical; 
         xy-swap; 
        // x-invert; 
        // y-invert; 
