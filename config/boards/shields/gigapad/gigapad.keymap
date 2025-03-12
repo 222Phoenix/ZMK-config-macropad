@@ -258,7 +258,7 @@ macros {
         next_layer {
             bindings = <
                                         &trans       &trans                  &trans         &trans
-                                        copysp       &kp C_VOL_DN            &kp C_VOL_UP   &kp PSCRN
+                                        &copysp      &kp C_VOL_DN            &kp C_VOL_UP   &kp PSCRN
               &trans       &trans       &trans                                       
             >;
         };
