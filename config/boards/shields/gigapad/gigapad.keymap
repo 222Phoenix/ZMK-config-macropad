@@ -210,15 +210,15 @@ macros {
             key-positions = <7 8>;
             bindings = <&kp PG_UP>;
         };
-        combo_pgdn {
+        combo_esc { //fix
             timeout-ms = <175>;
             key-positions = <5 6>;
-            bindings = <&kp PG_DN>;
+            bindings = <&kp ESC>;
         };
-        combo_esc {
+        combo_pgup { //fix
             timeout-ms = <175>;
             key-positions = <6 7>;
-            bindings = <&kp ESC>;
+            bindings = <&kp PG_UP>;
         };
         combo_reset {
             timeout-ms = <175>;
