@@ -196,6 +196,17 @@ macros {
             ;
     };
 
+    copysp: copysp {
+        label = "copysp";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap &kp C &kp L &kp V &kp A &kp C>
+            , <&macro_release &kp LCTRL>
+            ;
+    };
+
   };
 };
 
@@ -205,22 +216,22 @@ macros {
     combos {
         compatible = "zmk,combos";
 
-        combo_dnuptry {
+        combo_pgdn {
             timeout-ms = <175>;
             key-positions = <4 5>;
             bindings = <&kp PG_DN>;
         };
-        combo_esc { //fix
+        combo_esc {
             timeout-ms = <175>;
             key-positions = <5 6>;
             bindings = <&kp ESC>;
         };
-        combo_pgup { //fix
+        combo_pgup {
             timeout-ms = <175>;
             key-positions = <6 7>;
             bindings = <&kp PG_UP>;
         };
-        combo_resetbroken {
+        combo_reset {
             timeout-ms = <175>;
             key-positions = <4 7>;
             bindings = <&bootloader>;
@@ -246,9 +257,9 @@ macros {
 
         next_layer {
             bindings = <
-                                        &trans       &trans                  &trans         &kp PSCRN
-                                        &trans       &kp C_VOL_DN            &kp C_VOL_UP   &trans
-              &trans       &trans       &bootloader                                       
+                                        &trans       &trans                  &trans         &trans
+                                        copysp       &kp C_VOL_DN            &kp C_VOL_UP   &kp PSCRN
+              &trans       &trans       &trans                                       
             >;
         };
 
