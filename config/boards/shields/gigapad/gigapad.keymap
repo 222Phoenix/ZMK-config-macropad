@@ -295,13 +295,13 @@ macros {
             timeout-ms = <175>;
             key-positions = <4 7>;
             bindings = <&bootloader>;
-        };
+        }; 
 
         combo_mute {
             timeout-ms = <175>;
             key-positions = <1 2>;
-            bindings = <&kp C_MUTE>;
-        };      
+            bindings = <&kp PSCRN>;
+        };  
 
     };
 };
@@ -316,7 +316,7 @@ macros {
         default_layer {
             bindings = <
                                         &tdltb       &hold_tap LC(V) LC(C)   &tdrtb       &kp BSPC
-                                        &copysp      &tdmck                  &tdrck       &kp PSCRN
+                                        &copysp      &tdmck                  &tdrck       &kp ENTER
               &mkp LCLK    &tdmck       &kp C_MUTE                                       
             >;
         };
