@@ -180,7 +180,7 @@
            acceleration-factor-max = <130>;//120 
            acceleration-factor-rate = <40>; 
            acceleration-start-offset = <0>;//7 
-           max-speed = <500>;/50
+           max-speed = <500>;//50
            enable-interval-based-speed; 
            input-default-sending-rate = <PS2_MOUSE_SAMPLING_RATE>; 
       }; 
