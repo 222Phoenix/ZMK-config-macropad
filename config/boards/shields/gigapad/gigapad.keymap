@@ -296,6 +296,12 @@ macros {
             bindings = <&bootloader>;
         };
 
+        combo_mute {
+            timeout-ms = <175>;
+            key-positions = <1 2>;
+            bindings = <&bootloader>;
+        };      
+
     };
 };
 
@@ -309,18 +315,19 @@ macros {
         default_layer {
             bindings = <
                                         &tdltb       &hold_tap LC(V) LC(C)   &tdrtb       &kp BSPC
-                                        &kp LEFT     &kp DOWN                &kp UP       &kp RIGHT
+                                        &copysp      &tdmck                  &tdrck       &kp PSCRN
               &mkp LCLK    &tdmck       &tdrck                                       
             >;
         };
 
         next_layer {
             bindings = <
-                                        &trans       &trans                  &trans         &trans
-                                        &copysp      &kp C_VOL_DN            &kp C_VOL_UP   &kp PSCRN
+                                        &trans       &kp C_VOL_DN            &kp C_VOL_UP  &trans
+                                        &kp LEFT     &kp DOWN                &kp UP       &kp RIGHT
               &trans       &trans       &trans                                       
             >;
         };
 
     };
 };
+
