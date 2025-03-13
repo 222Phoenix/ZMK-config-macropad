@@ -299,7 +299,7 @@ macros {
         combo_mute {
             timeout-ms = <175>;
             key-positions = <1 2>;
-            bindings = <&bootloader>;
+            bindings = <&kp mute>;
         };      
 
     };
@@ -316,7 +316,7 @@ macros {
             bindings = <
                                         &tdltb       &hold_tap LC(V) LC(C)   &tdrtb       &kp BSPC
                                         &copysp      &tdmck                  &tdrck       &kp PSCRN
-              &mkp LCLK    &tdmck       &tdrck                                       
+              &mkp LCLK    &tdmck       &kp mute                                       
             >;
         };
 
