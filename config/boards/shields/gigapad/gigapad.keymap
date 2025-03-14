@@ -219,11 +219,11 @@
             tapping-term-ms = <200>;
             bindings = <&hold_tap_clk 1 MCLK>, <&kp LC(LS(T))>;
         };
-        tdrck: tap_dance_tdrck {                               //rclick
+        tdrck: tap_dance_rck {                                 //rclick
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mkp RCLK>, <&kp LC(W)>;
+            bindings = <&hold_tap_clk 1 RCLK>>, <&kp LC(W)>;
         };
 
     };
