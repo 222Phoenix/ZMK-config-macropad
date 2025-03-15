@@ -332,7 +332,7 @@ macros {
         bt_layer {
             bindings = <
                                         &trans            &trans             &trans         &trans
-                                        &BT_CLR_ALL        &BT_PRV            &bt BT_NXT     &trans
+                                        &bt BT_CLR_ALL        &bt BT_PRV            &bt BT_NXT     &trans
               &trans       &trans       &trans                                       
             >;
         };
