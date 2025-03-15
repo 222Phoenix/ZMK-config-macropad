@@ -317,7 +317,7 @@ macros {
             bindings = <
                                         &tdltb       &hold_tap LC(V) LC(C)   &tdrtb       &kp BSPC
                                         &copysp      &tdmck                  &tdrck       &kp ENTER
-              &mkp LCLK    &tdmck       &tog 3                                       
+              &mkp LCLK    &tdmck       &tog 2                                       
             >;
         };
 
