@@ -204,25 +204,25 @@
         tdltb: tap_dance_ltb {                                 //left tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&hold_tap LA(LEFT) LS(COMMA)>, <&kp LC(LS(TAB))>;
         };
         tdrtb: tap_dance_rtb {                                 //right tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&hold_tap LA(RIGHT) LS(DOT)>, <&kp LC(TAB)>;
         };
         tdmck: tap_dance_mck {                                 //mclick
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&hold_tap_clk 1 MCLK>, <&kp LC(LS(T))>;
         };
         tdrck: tap_dance_rck {                                 //rclick
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&hold_tap_clk 1 RCLK>, <&kp LC(W)>;
         };
 
@@ -236,14 +236,14 @@ behaviors {
   hold_tap: hold_tap {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <300>;
     quick-tap-ms = <0>;
     bindings = <&kp>, <&kp>;
   };
   hold_tap_clk: hold_tap_clk {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <300>;
     quick-tap-ms = <0>;
     bindings = <&kp>, <&mkp>;
   };
