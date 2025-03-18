@@ -331,7 +331,7 @@ macros {
 
         bt_layer {
             bindings = <
-                                        &&out OUT_TOG            &trans             &trans         &trans
+                                        &out OUT_TOG            &trans             &trans         &trans
                                         &bt BT_CLR_ALL        &bt BT_PRV            &bt BT_NXT     &trans
               &trans       &trans       &trans                                       
             >;
