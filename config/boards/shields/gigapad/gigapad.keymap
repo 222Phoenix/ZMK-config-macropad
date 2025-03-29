@@ -331,8 +331,8 @@ macros {
 
         bt_layer {
             bindings = <
-                                        &out OUT_TOG            &trans             &trans         &trans
-                                        &bt BT_CLR_ALL        &bt BT_PRV            &bt BT_NXT     &trans
+                                        &out OUT_BLE            &out OUT_USB       &trans         &trans
+                                        &bt BT_CLR_ALL          BT_SEL 1           BT_SEL 2       BT_SEL 3
               &trans       &trans       &trans                                       
             >;
         };
