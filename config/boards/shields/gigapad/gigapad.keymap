@@ -276,26 +276,19 @@ macros {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp C &kp L &kp V &kp A &kp C>
-            , <&macro_release &kp LCTRL>
-            ;
+            = <&macro_press &kp LCTRL>, 
+              <&macro_tap &kp C &kp L &kp V &kp A &kp C>,
+              <&macro_release &kp LCTRL>;
     };
 
-  };
-};
-
-//macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros 
-
-/ {
-macros {
-           
     ctrla: ctrla {
         label = "ctrla";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-            = <&macro_tap &kp LC(A) &kp LC(A)>;
+            = <&macro_press &kp LCTRL>, 
+              <&macro_tap &kp A &kp C>,
+              <&macro_release &kp LCTRL>;
     }; 
 
   };
