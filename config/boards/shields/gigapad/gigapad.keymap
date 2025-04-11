@@ -329,7 +329,6 @@ macros {
             key-positions = <4 7>;
             bindings = <&bootloader>;
         }; 
-
         combo_mute {
             timeout-ms = <175>;
             key-positions = <1 2>;
@@ -350,7 +349,7 @@ macros {
             bindings = <
                                         &tdltb       &hold_tap LC(V) LC(C)   &tdrtb       &kp BSPC
                                         &copysp      &tdmck                  &tdrck       &kp ENTER
-              &mkp LCLK    &tdmck       &tg 3                                       
+              &mkp LCLK    &tdmck       &tog 3                                       
             >;
         };
 
