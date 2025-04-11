@@ -289,8 +289,9 @@ macros {
         #binding-cells = <0>;
         bindings
             = <&macro_press &kp LSFT>,
-              <&macro_tap &kp LS(APOS) &kp LS(APOS) &kp LEFT &kp LEFT>,
-              <&macro_release &kp LSFT>;
+              <&macro_tap &kp LS(APOS) &kp LS(APOS)>,
+              <&macro_release &kp LSFT>,
+              <&macro_tap &kp LEFT>;
     };
 
   };
