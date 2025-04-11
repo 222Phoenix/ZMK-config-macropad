@@ -256,12 +256,11 @@ behaviors {
 
 / {
     behaviors {
-        asp: asp {
+        quot: quot {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&ctrla>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_LCTL)>;
+            bindings = <QUOTE>, <&quotm>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
       
     };
@@ -282,15 +281,15 @@ macros {
               <&macro_release &kp LCTRL>;
     };
 
-    ctrla: ctrla {
-        label = "ctrla";
+    quotm: quotm {
+        label = "quotm";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-            = <&macro_press &kp LCTRL>, 
-              <&macro_tap &kp A &kp C>,
-              <&macro_release &kp LCTRL>;
-    }; 
+            = <&macro_press &kp LSFT>,
+              <&macro_tap &kp LS(APOS) &kp LS(APOS) &kp LEFT &kp LEFT>,
+              <&macro_release &kp LSFT>;
+    };
 
   };
 };
@@ -365,7 +364,7 @@ macros {
             bindings = <
                                         &trans                  &mmv MOVE_UP       &trans            &msc SCRL_UP
                                         &mmv MOVE_LEFT          &mmv MOVE_DOWN     &mmv MOVE_RIGHT   &msc SCRL_DOWN
-              &kp LCTRL     &asp         &trans                                       
+              &kp LCTRL     &quot        &trans                                       
             >;
         };        
 
