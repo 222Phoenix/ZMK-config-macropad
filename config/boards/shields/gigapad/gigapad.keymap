@@ -7,9 +7,6 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors/mouse_setting.dtsi>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
-
 #define SLSH   &hold_tap QMARK SLASH
 
   // Only apply these settings on the side that has the TP connected
@@ -373,7 +370,7 @@ macros {
             bindings = <
                                         &trans                  &mmv MOVE_UP       &trans            &msc SCRL_UP
                                         &mmv MOVE_LEFT          &mmv MOVE_DOWN     &mmv MOVE_RIGHT   &msc SCRL_DOWN
-              &trans       &tdtest      &trans                                       
+              &mkp LCLK    &tdmck       &tdrck                                       
             >;
         };        
 
