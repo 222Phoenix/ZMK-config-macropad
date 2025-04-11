@@ -288,7 +288,7 @@ macros {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-            = <&macro_tap &kp SLASH>;
+            = <&macro_tap &kp BSLH>;
     };      
 
   };
