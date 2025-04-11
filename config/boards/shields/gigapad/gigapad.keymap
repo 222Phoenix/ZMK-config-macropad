@@ -6,6 +6,7 @@
 #include <dt-bindings/zmk/mouse_settings.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors/mouse_setting.dtsi>
+#include <dt-bindings/zmk/pointing.h>
 
   // Only apply these settings on the side that has the TP connected
   // (usually the right side)
