@@ -373,8 +373,8 @@ macros {
 
         3 {
             bindings = <
-                                        &trans                  &mmv MOVE_UP       &trans            &msc SCRL_UP
-                                        &mmv MOVE_LEFT          &mmv MOVE_DOWN     &mmv MOVE_RIGHT   &msc SCRL_DOWN
+                                        &tdltb                  &mmv MOVE_UP       &tdrtb            &kp BSPC
+                                        &mmv MOVE_LEFT          &mmv MOVE_DOWN     &mmv MOVE_RIGHT   &kp ENTER
               &mkp LCLK    &tdmck       &tdrck                                       
             >;
         };        
